@@ -1,6 +1,9 @@
 # Golang - Utils
 
-[![Made with Go](https://img.shields.io/badge/go->%3D1.16-blue?logo=go&logoColor=white)](https://golang.org)
+[![Made with Go](https://img.shields.io/badge/go->%3D1.16-blue?style=flat-square&logo=go&logoColor=white)](https://golang.org)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/flownerd/utils)](https://pkg.go.dev/github.com/flownerd/utils)
+
+[![Build](https://github.com/flownerd/utils/workflows/build/badge.svg)](https://github.com/flownerd/utils/actions)
 [![CodeQL](https://github.com/flownerd/utils/workflows/CodeQL/badge.svg)](https://github.com/flownerd/utils/actions?query=workflow%3ACodeQL "Code quality workflow status")
 [![GitHub tag](https://img.shields.io/github/v/tag/flownerd/utils.svg?sort=semver)](https://github.com/flownerd/utils/releases/?include_prereleases&sort=semver "View GitHub releases")
 [![License](https://img.shields.io/badge/License-GPL%20v3-blue)](#license "Go to license section")
