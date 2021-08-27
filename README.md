@@ -1,5 +1,8 @@
 # Golang - Utils
 
+[![CodeQL](https://github.com/flownerd/utils/workflows/CodeQL/badge.svg)](https://github.com/flownerd/utils/actions?query=workflow%3ACodeQL "Code quality workflow status")
+[![GitHub tag](https://img.shields.io/github/v/tag/flownerd/utils.svg?sort=semver)](https://github.com/flownerd/utils/releases/?include_prereleases&sort=semver "View GitHub releases")
+
 ## Using the Input functions
 
 Those functions were created to deal with the user input, by default we need to create the reader and after that deal with the newline returns and all the other issues that we can have, in that case I create some wrapper to deal with that.
