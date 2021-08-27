@@ -3,7 +3,7 @@
 [![Made with Go](https://img.shields.io/badge/go->%3D1.16-blue?logo=go&logoColor=white)](https://golang.org)
 [![CodeQL](https://github.com/flownerd/utils/workflows/CodeQL/badge.svg)](https://github.com/flownerd/utils/actions?query=workflow%3ACodeQL "Code quality workflow status")
 [![GitHub tag](https://img.shields.io/github/v/tag/flownerd/utils.svg?sort=semver)](https://github.com/flownerd/utils/releases/?include_prereleases&sort=semver "View GitHub releases")
-[![License](https://img.shields.io/badge/License-GPL-blue)](#license "Go to license section")
+[![License](https://img.shields.io/badge/License-GPL%20v3-blue)](#license "Go to license section")
 
 [![FlowNerd - utils](https://img.shields.io/static/v1?label=flownerd&message=utils&color=blue&logo=github)](https://github.com/flownerd/utils)
 [![stars - utils](https://img.shields.io/github/stars/flownerd/utils?style=social)](https://github.com/flownerd/utils)
