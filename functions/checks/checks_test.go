@@ -18,6 +18,9 @@ var (
 
 	// Variable to hold the number zero inside an interface
 	isZero interface{}
+
+	// Variable to hold the empty string inside an interface
+	isEmpty interface{}
 )
 
 // Function to test the IsSymlink
@@ -215,6 +218,29 @@ func TestClearStr(t *testing.T) {
 
 	// Check the result
 	msg = fmt.Sprintf("The String has no NewLine or Return: [%v]", is_ok)
+	showMsg(msg, is_ok, t)
+}
+
+// Function to test the IsZeroOfUnderlyingTypes
+func TestEmpty(t *testing.T) {
+	// Needs to use the interface to hold the number 0
+	isZero = 0
+
+	// Needs to use the interface to hold the string as empty ""
+	isEmpty = ""
+
+	// Check if the interface is igual zero (0) or if the string is empty
+	is_ok = Empty(isZero)
+
+	// Check the result
+	msg = fmt.Sprintf("The Interface is equal Zero: [%v]", is_ok)
+	showMsg(msg, is_ok, t)
+
+	// Check if the interface is igual zero (0) or if the string is empty
+	is_ok = Empty(isEmpty)
+
+	// Check the result
+	msg = fmt.Sprintf("The Interface is Empty: [%v]", is_ok)
 	showMsg(msg, is_ok, t)
 
 }

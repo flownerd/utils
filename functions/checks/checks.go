@@ -136,3 +136,13 @@ func IsSymlink(object string) bool {
 	// Return if is a symlink or not
 	return isSymlink
 }
+
+// Function to check if the parameter is empty or not.
+func Empty(toCheck interface{}) bool {
+	// Check if the parameter is empty or zero in the case of number
+	if toCheck == "" || IsZeroOfUnderlyingType(toCheck) {
+		return true
+	} else {
+		return false
+	}
+}
