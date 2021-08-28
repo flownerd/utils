@@ -45,7 +45,7 @@ module sandbox
 
 go 1.17
 
-require github.com/flownerd/utils v0.0.2 // Here I am using the version v0.0.2 if you want to use the lastest just remove the version
+require github.com/flownerd/utils v0.0.4 // Here I am using the version v0.0.4 if you want to use the lastest just remove the version
 ```
 
 Now we can put the following content inside the main.go to test the utils module
@@ -54,8 +54,11 @@ Now we can put the following content inside the main.go to test the utils module
 package main
 
 import (
- "fmt"
- inputs "github.com/flownerd/utils/functions/inputs"
+  "bufio"
+  "fmt"
+  "os"
+
+  inputs "github.com/flownerd/utils/functions/inputs"
 )
 
 // Structs
@@ -67,12 +70,22 @@ type User struct {
 }
 
 func main() {
- var user User
- user.UserName = inputs.ReadString("What is your name?\n")
- user.Age = inputs.ReadInt("How old are you?\n")
- user.FavoriteNumber = inputs.ReadFloat("What is your favorite number?\n")
- user.OwnsADog = inputs.ReadBool("Do you own a dog (y/n)?\n")
- fmt.Printf("Your name is %s, and you are %d years old. Your favourite number is %.2f. Owns a dog: %t.\n", user.UserName, user.Age, user.FavoriteNumber, user.OwnsADog)
+  var user User
+
+  // Defining the reader
+  reader := bufio.NewReader(os.Stdin)
+
+  // Create a variable from Struct Inputs
+  input := inputs.Input{
+    Buffer:        reader, // default os.Stdin
+    NotShowOutput: false,  // Show the user message, can be true so the output will be empty.
+  }
+
+  user.UserName = input.ReadString("What is your name?\n")
+  user.Age = input.ReadInt("How old are you?\n")
+  user.FavoriteNumber = input.ReadFloat("What is your favorite number?\n")
+  user.OwnsADog = input.ReadBool("Do you own a dog (y/n)?\n")
+  fmt.Printf("Your name is %s, and you are %d years old. Your favourite number is %.2f. Owns a dog: %t.\n", user.UserName, user.Age, user.FavoriteNumber, user.OwnsADog)
 }
 ```
 
@@ -91,7 +104,8 @@ What is your name?
 How old are you?
 -> 33
 What is your favorite number?
--> 14.15
+-> 14.1519
 Do you own a dog (y/n)?
--> Your name is Douglas, and you are 33 years old. Your favourite number is 14.15. Owns a dog: true.
+-> y
+Your name is Douglas, and you are 33 years old. Your favourite number is 14.15. Owns a dog: true.
 ```
